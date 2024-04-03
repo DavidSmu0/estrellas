@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrellitas</title>
+</head>
+<body>
+    <div style="text-align: center;" class="estrellas">
+    <img id="e1" src="ev_b.png" alt="">
+    <img id="e2" src="ev_b.png" alt="">
+    <img id="e3" src="ev_b.png" alt="">
+    <img id="e4" src="ev_b.png" alt="">
+    <img id="e5" src="ev_b.png" alt="">
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#e1').on("mouseover", iluminar1);
+            $('#e1').on("mouseout", desiluminar1);
+            
+
+            $('#e2').on("mouseover", iluminar2);
+            $('#e2').on("mouseout", desiluminar2);
+            
+            
+            $('#e3').on("mouseover", iluminar3);
+            $('#e3').on("mouseout", desiluminar3);
+            
+
+            $('#e4').on("mouseover", iluminar4);
+            $('#e4').on("mouseout", desiluminar4);
+            
+
+            $('#e5').on("mouseover", iluminar5);
+            $('#e5').on("mouseout", desiluminar5);
+            
+            function iluminar1() {
+                if ($('#e1').attr('src', 'ep_b.png'));
+            }
+
+            function desiluminar1() {
+                if ($('#e1').attr('src', 'ev_b.png'));
+            }
+
+
+            function iluminar2() {
+                if ($('#e1').attr('src', 'ep_b.png'));
+                if ($('#e2').attr('src', 'ep_b.png'));
+            }
+
+            function desiluminar2() {
+                if ($('#e1').attr('src', 'ev_b.png'));
+                if ($('#e2').attr('src', 'ev_b.png'));
+            }
+
+            function iluminar3() {
+                if ($('#e1').attr('src', 'ep_b.png'));
+                if ($('#e2').attr('src', 'ep_b.png'));
+                if ($('#e3').attr('src', 'ep_b.png'));
+            }
+
+            function desiluminar3() {
+                if ($('#e1').attr('src', 'ev_b.png'));
+                if ($('#e2').attr('src', 'ev_b.png'));
+                if ($('#e3').attr('src', 'ev_b.png'));
+            }
+
+            function iluminar4() {
+                if ($('#e1').attr('src', 'ep_b.png'));
+                if ($('#e2').attr('src', 'ep_b.png'));
+                if ($('#e3').attr('src', 'ep_b.png'));
+                if ($('#e4').attr('src', 'ep_b.png'));
+            }
+
+            function desiluminar4() {
+                if ($('#e1').attr('src', 'ev_b.png'));
+                if ($('#e2').attr('src', 'ev_b.png'));
+                if ($('#e3').attr('src', 'ev_b.png'));
+                if ($('#e4').attr('src', 'ev_b.png'));
+            }
+
+            function iluminar5() {
+                if ($('#e1').attr('src', 'ep_b.png'));
+                if ($('#e2').attr('src', 'ep_b.png'));
+                if ($('#e3').attr('src', 'ep_b.png'));
+                if ($('#e4').attr('src', 'ep_b.png'));
+                if ($('#e5').attr('src', 'ep_b.png'));
+            }
+
+            function desiluminar5() {
+                if ($('#e1').attr('src', 'ev_b.png'));
+                if ($('#e2').attr('src', 'ev_b.png'));
+                if ($('#e3').attr('src', 'ev_b.png'));
+                if ($('#e4').attr('src', 'ev_b.png'));
+                if ($('#e5').attr('src', 'ev_b.png'));
+            }
+        });
+    </script>
+    </body>
+</html>
