@@ -23,8 +23,8 @@
     <script>
       $(document).ready(function () {
 
-        var acu=0;
-        var conta=0;
+        var acu = 0;
+        var conta = 0;
 
         $('.est').on('mouseover',function()
         {
@@ -38,9 +38,9 @@
 
         function iluminar(id)
         {
-          let nro=parseInt(id[1])
+          let nro = parseInt(id[1])
           $('.est').attr('src','ev_b.png');
-          for (i=1;i<=nro;i++)
+          for (i = 1; i <= nro; i++)
           {
             $('#e'+i).attr('src','ep_b.png');
           }
@@ -49,128 +49,104 @@
 
         function marcar(id)
         {
-          let nro=parseInt(id[1])
+          let nro = parseInt(id[1])
           
-          for(i=1;i<=nro;i++)
+          for(i = 1; i <= nro; i++)
           {
             $('#e'+i).attr('src','ec_b.png')
           }
-          acu=+1;
-          conta=+nro;
+
+          acu += 1;
+          conta += nro;
+
         }
 
 
-
-
-
-        $('.est').on('mouseout',apagar)
-
+        $('.est').on('mouseout',apagar);
+        var prom = 0;
         function apagar()
         {
           $('.est').attr('src','ev_b.png');
-          let prom=conta/acu;
+          prom = conta / acu;
+
+          // switch (prom)
+          // {
+          //   case (prom<=1):
+          //   {
+          //     $('#e1').attr('src','ec_b.png');
+          //   }
+          // }
           console.log(prom);
+          if (prom <= 1) {
+            $('#e1').attr('src','ec_b.png');
+          }
+          
+          if (prom >= 1 && prom < 1.5) {
+            $('#e1').attr('src','ec_b.png');
+          } else if (prom >= 1.5 && prom < 2) {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','em_b.png');
+          }
+          else if (prom>=2 && prom < 2.5)
+          {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','ec_b.png');
+          }
+          else if (prom>=2.5 && prom < 3)
+          {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','ec_b.png');
+            $('#e3').attr('src','em_b.png');
+          }
+          else if (prom>=3 && prom < 3.5)
+          {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','ec_b.png');
+            $('#e3').attr('src','ec_b.png');
+          }
+          else if (prom>=3.5 && prom < 4)
+          {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','ec_b.png');
+            $('#e3').attr('src','ec_b.png');
+            $('#e4').attr('src','em_b.png');
+          }
+          else if (prom>=4 && prom < 4.5)
+          {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','ec_b.png');
+            $('#e3').attr('src','ec_b.png');
+            $('#e4').attr('src','ec_b.png');
+            
+
+          }
+
+          else if (prom>=4.5 && prom < 5)
+          {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','ec_b.png');
+            $('#e3').attr('src','ec_b.png');
+            $('#e4').attr('src','ec_b.png');
+            $('#e5').attr('src','em_b.png');
+
+          }
+
+          else if (prom==5)
+          {
+            $('#e1').attr('src','ec_b.png');
+            $('#e2').attr('src','ec_b.png');
+            $('#e3').attr('src','ec_b.png');
+            $('#e4').attr('src','ec_b.png');
+            $('#e5').attr('src','ec_b.png');
+
+          }
+
+
         }
 
 
-        // $("#e1").on("mouseover", iluminar1);
-        // $("#e1").on("mouseout", desiluminar1);
-        // $("#e1").on("click", marcar1);
+      });
 
-        // $("#e2").on("mouseover", iluminar2);
-        // $("#e2").on("mouseout", desiluminar2);
-        // $("#e3").on("click", marcar2);
-
-        // $("#e3").on("mouseover", iluminar3);
-        // $("#e3").on("mouseout", desiluminar3);
-
-        // $("#e4").on("mouseover", iluminar4);
-        // $("#e4").on("mouseout", desiluminar4);
-
-        // $("#e5").on("mouseover", iluminar5);
-        // $("#e5").on("mouseout", desiluminar5);
-
-
-        // var prom=0;
-        // var click=0;
-        
-        // function iluminar1() {
-        //   if ($("#e1").attr("src", "ep_b.png"));
-        // }
-
-        // function desiluminar1() {
-        //   if ($("#e1").attr("src", "ev_b.png"));
-        // }
-
-        // function marcar1() {
-        //   ($("#e1").attr("src", "ec_b.png"));
-        //   click+=1;
-        //   prom+=1;
-        //   console.log(parseInt(prom));
-        //   console.log(parseInt(click));
-          
-        // }
-
-        // function iluminar2() {
-        //   if ($("#e1").attr("src", "ep_b.png"));
-        //   if ($("#e2").attr("src", "ep_b.png"));
-        // }
-
-        // function desiluminar2() {
-        //   if ($("#e1").attr("src", "ev_b.png"));
-        //   if ($("#e2").attr("src", "ev_b.png"));
-        // }
-
-        // function marcar2() {
-        //   ($("#e1").attr("src", "ec_b.png"));
-        //   ($("#e2").attr("src", "ec_b.png"));
-        //   click+=1;
-        //   prom+=2;
-          
-        // }
-
-        // function iluminar3() {
-        //   if ($("#e1").attr("src", "ep_b.png"));
-        //   if ($("#e2").attr("src", "ep_b.png"));
-        //   if ($("#e3").attr("src", "ep_b.png"));
-        // }
-
-        // function desiluminar3() {
-        //   if ($("#e1").attr("src", "ev_b.png"));
-        //   if ($("#e2").attr("src", "ev_b.png"));
-        //   if ($("#e3").attr("src", "ev_b.png"));
-        // }
-
-        // function iluminar4() {
-        //   if ($("#e1").attr("src", "ep_b.png"));
-        //   if ($("#e2").attr("src", "ep_b.png"));
-        //   if ($("#e3").attr("src", "ep_b.png"));
-        //   if ($("#e4").attr("src", "ep_b.png"));
-        // }
-
-        // function desiluminar4() {
-        //   if ($("#e1").attr("src", "ev_b.png"));
-        //   if ($("#e2").attr("src", "ev_b.png"));
-        //   if ($("#e3").attr("src", "ev_b.png"));
-        //   if ($("#e4").attr("src", "ev_b.png"));
-        // }
-
-        // function iluminar5() {
-        //   if ($("#e1").attr("src", "ep_b.png"));
-        //   if ($("#e2").attr("src", "ep_b.png"));
-        //   if ($("#e3").attr("src", "ep_b.png"));
-        //   if ($("#e4").attr("src", "ep_b.png"));
-        //   if ($("#e5").attr("src", "ep_b.png"));
-        // }
-
-        // function desiluminar5() {
-        //   if ($("#e1").attr("src", "ev_b.png"));
-        //   if ($("#e2").attr("src", "ev_b.png"));
-        //   if ($("#e3").attr("src", "ev_b.png"));
-        //   if ($("#e4").attr("src", "ev_b.png"));
-        //   if ($("#e5").attr("src", "ev_b.png"));
-        }
-      );
     </script>
   </body>
 </html>
